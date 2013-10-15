@@ -1,0 +1,47 @@
+@import: 'brand.less';
+@import: 'typography.less';
+
+.box-sizing () {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+  height:300px; width:300px;
+}
+
+// Defaults to 5px radius
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+}
+
+// 3 new mixins
+.roundedbutton {
+  border-radius: 10px;
+  background: @color3;
+ 
+
+
+}
+
+button[type="submit"] {
+  .roundedbutton;
+  padding: 20px 20px;
+ 
+}
+
+.link{
+	color:@color1;
+	text-transform:uppercase;
+	background:@color5;
+
+}
+
+.gradient () {
+	background-color: @color1;
+	background: -webkit-gradient(top, from(@color1), to(@color2));
+	background: -webkit-linear-gradient(top, @color1, @color2);
+	background: -moz-linear-gradient(top, @color1, @color2);
+	background: -ms-linear-gradient(top, @color1, @color2);
+	background: -o-linear-gradient(top, @color1, @color2);
+}
